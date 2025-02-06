@@ -21,6 +21,7 @@ import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import useFetch from "@/hooks/use-fetch";
 import { updateUser } from "@/actions/user";
+import { toast } from "sonner";
 
 const OnboardingForm = ({ industries }) => {
   const router = useRouter();
@@ -59,6 +60,8 @@ const OnboardingForm = ({ industries }) => {
 
   useEffect(() => {
     if (updateResult?.success && !updateLoading) {
+      console.log(updateResult);
+
       toast.success("Profile completed successfully!");
       router.push("/dashboard");
       router.refresh();
