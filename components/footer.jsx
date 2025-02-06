@@ -47,7 +47,7 @@ function Footer() {
         {/* Copyright and Legal */}
         <div className="mt-12 pt-8 border-t border-gray-200 text-center">
           <p className="text-gray-600">
-            © {new Date().getFullYear()} CareerAI. All rights reserved.
+            © {new Date().getFullYear()} SuccessMentorAI. All rights reserved.
           </p>
         </div>
       </div>
