@@ -3,12 +3,14 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Success Mentor AI",
-  description: "",
+  description:
+    "   Advance your career with personalized guidance, interview prep, and AI-powered tools for job success.",
 };
 
 export default function RootLayout({ children }) {
@@ -22,11 +24,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main className="min-h-screen">{children}</main>
           <Toaster richColors />
-          <footer className="bg-muted/50 py-12">
-            <div className="container mx-auto px-4 text-center text-gray-200">
-              <p>Made with 💗 by Arijit</p>
-            </div>
-          </footer>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
