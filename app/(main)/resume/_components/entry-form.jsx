@@ -15,15 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import useFetch from "@/hooks/use-fetch";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { format, parse } from "date-fns";
-import {
-  Delete,
-  Loader2,
-  PlusCircle,
-  Sparkles,
-  Trash,
-  Trash2,
-  X,
-} from "lucide-react";
+import { Loader2, PlusCircle, Sparkles, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";

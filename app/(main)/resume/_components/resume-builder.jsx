@@ -32,7 +32,6 @@ export default function ResumeBuilder({ initialContent }) {
   const [isGenerating, setIsGenerating] = useState(false);
   const { user } = useUser();
 
-  console.log(user, "arijit");
   const {
     control,
     register,
