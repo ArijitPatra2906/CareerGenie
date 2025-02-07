@@ -28,16 +28,19 @@ export default function QuizList({ assessments }) {
     <>
       <Card>
         <CardHeader>
-          <div className="flex items-center justify-between">
+          <div className="flex justify-between flex-col-reverse md:flex-row gap-2">
             <div>
-              <CardTitle className="text-3xl md:text-4xl">
+              <CardTitle className="text-2xl md:text-4xl">
                 Recent Quizzes
               </CardTitle>
               <CardDescription>
                 Review your past quiz performance
               </CardDescription>
             </div>
-            <Button onClick={() => router.push("/interview/mock")}>
+            <Button
+              className="w-full md:w-fit"
+              onClick={() => router.push("/interview/mock")}
+            >
               Start New Quiz
             </Button>
           </div>
@@ -79,7 +82,11 @@ export default function QuizList({ assessments }) {
         </CardContent>
       </Card>
 
-      <Dialog open={!!selectedQuiz} onOpenChange={() => setSelectedQuiz(null)}>
+      <Dialog
+        open={!!selectedQuiz}
+        onOpenChange={() => setSelectedQuiz(null)}
+        className="px-2"
+      >
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle></DialogTitle>

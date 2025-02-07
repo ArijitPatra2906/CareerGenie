@@ -9,7 +9,9 @@ export default async function InterviewPrepPage() {
   return (
     <div>
       <div className="flex items-center justify-between mb-5">
-        <h1 className="text-6xl font-bold">Interview Preparation</h1>
+        <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl">
+          Interview Preparation
+        </h1>{" "}
       </div>
       <div className="space-y-6">
         <StatsCards assessments={assessments} />

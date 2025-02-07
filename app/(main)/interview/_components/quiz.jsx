@@ -101,35 +101,27 @@ const Quiz = () => {
 
   if (!quizData) {
     return (
-      <Card className="mx-2">
-        <CardHeader>
-          <CardTitle>Ready to test your knowledge?</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground">
-            This quiz contains 10 questions specific to your industry and
-            skills. Take your time and choose the best answer for each question.
-          </p>
-        </CardContent>
-        <CardFooter>
-          <Button onClick={generateQuizFn} className="w-full">
-            Start Quiz
-          </Button>
-        </CardFooter>
-      </Card>
+      <div className="mx-2 space-y-2">
+        <h1>Ready to test your knowledge?</h1>
+        <p className="text-muted-foreground">
+          This quiz contains 10 questions specific to your industry and skills.
+          Take your time and choose the best answer for each question.
+        </p>
+        <Button onClick={generateQuizFn} className="w-full">
+          Start Quiz
+        </Button>
+      </div>
     );
   }
 
   const question = quizData[currentQuestion];
 
   return (
-    <Card className="mx-2">
-      <CardHeader>
-        <CardTitle>
-          Question {currentQuestion + 1} of {quizData.length}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
+    <div className="mx-2">
+      <h1 className="pb-2">
+        Question {currentQuestion + 1} of {quizData.length}
+      </h1>
+      <div className="space-y-4">
         <p className="text-lg font-medium">{question.question}</p>
         <RadioGroup
           onValueChange={handleAnswer}
@@ -150,8 +142,8 @@ const Quiz = () => {
             <p className="text-muted-foreground">{question.explanation}</p>
           </div>
         )}
-      </CardContent>
-      <CardFooter className="flex justify-between">
+      </div>
+      <div className="flex justify-between mt-4">
         {!showExplanation && (
           <Button
             onClick={() => setShowExplanation(true)}
@@ -171,8 +163,8 @@ const Quiz = () => {
             ? "Next Question"
             : "Finish Quiz"}
         </Button>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 };
 

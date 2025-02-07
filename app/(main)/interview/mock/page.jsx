@@ -15,7 +15,9 @@ export default function MockInterviewPage() {
         </Link>
 
         <div>
-          <h1 className="text-6xl font-bold">Mock Interview</h1>
+          <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl">
+            Mock Interview
+          </h1>
           <p className="text-muted-foreground">
             Test your knowledge with industry-specific questions
           </p>
