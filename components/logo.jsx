@@ -3,19 +3,17 @@ import React from "react";
 const Logo = () => {
   return (
     <div className="flex items-center justify-center">
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col md:flex-row items-center justify-center">
         <div className="px-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-bot"
+            className="lucide lucide-bot h-6 w-6 md:h-8 md:w-8"
           >
             <path d="M12 8V4H8" />
             <rect width="16" height="12" x="4" y="8" rx="2" />
@@ -25,8 +23,11 @@ const Logo = () => {
             <path d="M9 13v2" />
           </svg>
         </div>
-        <div className="text-gray-800 font-bold text-2xl">
+        <div className="text-gray-800 font-bold text-2xl hidden md:block">
           <span className="text-blue-600">Success</span>MentorAI
+        </div>
+        <div className="text-gray-800 font-bold text-sm md:hidden">
+          <span className="text-blue-600">SM</span>AI
         </div>
       </div>
     </div>
