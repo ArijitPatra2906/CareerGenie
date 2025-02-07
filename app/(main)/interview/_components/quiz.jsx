@@ -102,7 +102,9 @@ const Quiz = () => {
   if (!quizData) {
     return (
       <div className="mx-2 space-y-2">
-        <h1>Ready to test your knowledge?</h1>
+        <h1 className="font-semibold text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+          Ready to test your knowledge?
+        </h1>
         <p className="text-muted-foreground">
           This quiz contains 10 questions specific to your industry and skills.
           Take your time and choose the best answer for each question.
