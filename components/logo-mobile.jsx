@@ -1,9 +1,9 @@
 import React from "react";
 
-const Logo = () => {
+const LogoMobile = () => {
   return (
     <div className="flex items-center justify-center">
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <div className="px-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,12 +23,12 @@ const Logo = () => {
             <path d="M9 13v2" />
           </svg>
         </div>
-        <div className="text-gray-800 font-bold text-2xl">
-          <span className="text-blue-600">Success</span>MentorAI
+        <div className="text-gray-800 font-bold">
+          <span className="text-blue-600">SM</span>AI
         </div>
       </div>
     </div>
   );
 };
 
-export default Logo;
+export default LogoMobile;

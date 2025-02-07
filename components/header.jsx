@@ -18,6 +18,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Logo from "./logo";
+import LogoMobile from "./logo-mobile";
 
 const Header = async () => {
   await checkUser();
@@ -26,7 +27,12 @@ const Header = async () => {
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto p-4 flex items-center justify-between">
         <Link href="/">
-          <Logo />
+          <div className="hidden md:block">
+            <Logo />
+          </div>
+          <div className="block md:hidden">
+            <LogoMobile />
+          </div>
         </Link>
 
         {/* Action Buttons */}
