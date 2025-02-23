@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "./logo";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 
 function Footer() {
   return (
@@ -13,33 +13,34 @@ function Footer() {
               Advance your career with personalized guidance, interview prep,
               and AI-powered tools for job success.
             </p>
-            <div className="flex w-full items-center justify-center space-x-4">
-              {[
-                {
-                  icon: <Twitter className="text-blue-500" />,
-                  href: "#",
-                },
-                {
-                  icon: <Linkedin className="text-blue-700" />,
-                  href: "#",
-                },
-                {
-                  icon: <Facebook className="text-blue-600" />,
-                  href: "#",
-                },
-                {
-                  icon: <Instagram className="text-pink-500" />,
-                  href: "#",
-                },
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="hover:bg-gray-100 p-2 rounded-full transition-colors"
-                >
-                  {social.icon}
-                </a>
-              ))}
+            <div className="">
+              <h2 className="text-lg text-gray-800 text-center">
+                Connect with Me
+              </h2>
+              <div className="flex w-full items-center justify-center space-x-4">
+                {[
+                  {
+                    icon: <Twitter className="text-blue-500 w-6 h-6" />,
+                    href: "https://x.com/arijitpatra2000?t=jB_7W34BR04OjacUjWLpQw&s=09",
+                  },
+                  {
+                    icon: <Linkedin className="text-blue-700 w-6 h-6" />,
+                    href: "https://www.linkedin.com/in/arijitpatra2906/",
+                  },
+                  {
+                    icon: <Github className="text-gray-800 w-6 h-6" />,
+                    href: "https://github.com/ArijitPatra2906",
+                  },
+                ].map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className="hover:bg-gray-100 p-2 rounded-full transition-colors"
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

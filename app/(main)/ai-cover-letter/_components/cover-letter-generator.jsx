@@ -49,7 +49,7 @@ export default function CoverLetterGenerator() {
   };
 
   return (
-    <div className="space-y-4 border p-3 rounded-lg shadow-md">
+    <div className="space-y-4">
       <h1 className="font-semibold text-xl">Job Details</h1>
       <p className="text-sm">
         Provide information about the position you're applying for
