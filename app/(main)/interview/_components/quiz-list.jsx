@@ -28,7 +28,7 @@ export default function QuizList({ assessments }) {
     <>
       <Card>
         <CardHeader>
-          <div className="flex justify-between flex-col-reverse md:flex-row gap-2">
+          <div className="flex justify-between gap-2">
             <div>
               <CardTitle className="text-2xl md:text-4xl">
                 Recent Quizzes
@@ -38,10 +38,16 @@ export default function QuizList({ assessments }) {
               </CardDescription>
             </div>
             <Button
-              className="w-full md:w-fit"
+              className="w-full md:w-fit hidden md:block"
               onClick={() => router.push("/interview/mock")}
             >
               Start New Quiz
+            </Button>
+            <Button
+              className="w-fit md:hidden"
+              onClick={() => router.push("/interview/mock")}
+            >
+              +
             </Button>
           </div>
         </CardHeader>
